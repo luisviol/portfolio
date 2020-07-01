@@ -13,28 +13,8 @@
       <title>Luis Villasmil - Portfolio 2020</title>
    </head>
    <body>
-      <div w3-include-html="footer.html"></div>
-      <include src="./footer.html"></include>
       <div class="container">
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Luis Villasmil</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse justify-content-end collapse" id="navbarNavDropdown" style="">
-               <ul class="navbar-nav">
-                  <li class="nav-item active">
-                     <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="about_me.html">Sobre mí</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Resumen</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
+        <nav-bar></nav-bar>
          <main role="main">
             <div class="bg-white container jumbotron pt-5 mt-5">
                <div class="row align-items-center featurette">
@@ -110,18 +90,11 @@
             </div>
          </section>
          <!-- Footer -->
-         <div class="dropdown-divider"></div>
-         <footer class="footer mt-auto py-3">
-           <div class="d-flex justify-content-between">
-             <div>
-               <p>© 2020 Luis Villasmil - UX Designer</p>
-             </div>
-             <div><span class="mx-2">Linkedin</span>
-               <span class="mx-2">Unsplash</span>
-               <span class="mx-2">Email</span><span class="ml-2">Dribbble</span></div>
-           </div>
-         </footer>
+         <foo-ter></foo-ter>
+         </div>
          <!-- Optional JavaScript -->
+         <script src="navBar.js"></script>
+         <script src="fooBar.js"></script>
          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
