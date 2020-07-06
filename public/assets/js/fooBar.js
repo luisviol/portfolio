@@ -5,11 +5,12 @@ class FooBar extends HTMLElement {
              <footer class="footer mt-auto py-3">
                <div class="d-flex justify-content-between">
                  <div>
-                   <p>© 2020 Luis Villasmil - UX Designer</p>
+                   <p>© 2020 Luis Villasmil</p>
                  </div>
-                 <div><span class="mx-2">Linkedin</span>
-                   <span class="mx-2">Unsplash</span>
-                   <span class="mx-2">Email</span><span class="ml-2">Dribbble</span></div>
+                 <div><span class="mx-2"><i class="fab fa-linkedin-in"></i></span>
+                   <span class="mx-2"><i class="fab fa-unsplash"></i></span>
+                   <span class="mx-2"><i class="far fa-envelope"></i></span>
+                   <span class="ml-2"><i class="fab fa-dribbble"></i></span></div>
                </div>
              </footer>`;
   }
