@@ -15,7 +15,7 @@ class MoreContent extends HTMLElement {
                                </div>
                             </div>
                             <div class="col-md-4">
-                               <img src="images/phone_prop.png" alt="WhyX Live Experiences" class="img-fluid mx-auto d-block">
+                               <img src="public/assets/img/phone_prop.png" alt="WhyX Live Experiences" class="img-fluid mx-auto d-block">
                             </div>
                          </div>
                       </div>
@@ -31,7 +31,7 @@ class MoreContent extends HTMLElement {
                                </div>
                             </div>
                             <div class="col-md-4">
-                               <img src="images/phone_prop.png" alt="WhyX Live Experiences" class="img-fluid mx-auto d-block">
+                               <img src="public/assets/img/phone_prop.png" alt="WhyX Live Experiences" class="img-fluid mx-auto d-block">
                             </div>
                          </div>
                       </div>
