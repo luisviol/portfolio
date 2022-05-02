@@ -5,7 +5,7 @@ class FooBar extends HTMLElement {
              <footer class="footer mt-auto py-3">
                <div class="d-flex justify-content-between">
                  <div>
-                   <p>© 2020 Luis Villasmil</p>
+                   <p>© 2022 Luis Villasmil</p>
                  </div>
                  <div><span class="mx-2"><i class="fab fa-linkedin-in"></i></span>
                    <span class="mx-2"><i class="fab fa-unsplash"></i></span>
