@@ -9,9 +9,9 @@ class MoreContent extends HTMLElement {
                          <div class="row no-gutters py-4">
                             <div class="col-md-8">
                                <div class="card-body">
-                                  <h5 class="lead">WHY X App</h5>
-                                  <div class="mb-1 text-muted">App design</div>
-                                  <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                  <h5>WHY X App</h5>
+                                  <span class="mb-1">App design</span>
+                                  <p class="card-text mt-1">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                                </div>
                             </div>
                             <div class="col-md-4">
@@ -25,9 +25,9 @@ class MoreContent extends HTMLElement {
                          <div class="row no-gutters py-4">
                             <div class="col-md-8">
                                <div class="card-body">
-                                  <h5 class="lead">Pandemic Research</h5>
-                                  <div class="mb-1 text-muted">User research</div>
-                                  <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                  <h5 >Pandemic Research</h5>
+                                  <span class="mb-1">User research</span>
+                                  <p class="card-text mt-1">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                                </div>
                             </div>
                             <div class="col-md-4">
