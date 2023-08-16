@@ -11,23 +11,23 @@ class NavBar extends HTMLElement {
                       <li class="nav-item active">
                          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                       </li>
-                      <li class="nav-item dropdown show">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true">Works</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Works</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Portfolio #1</a>
                         <a class="dropdown-item" href="#">Portfolio #2</a>
                         <a class="dropdown-item" href="#">Portfolio #3</a>
                         </div>
                       </li>
-                      <li class="nav-item dropdown show">
-                        <a class="nav-link dropdown-toggle" href="about_me.html" data-toggle="dropdown" aria-expanded="true">About</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about_me.html" data-toggle="dropdown" aria-expanded="false">About</a>
                         <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">About me</a>
+                        <a class="dropdown-item" href="about_me.html">About me</a>
                         <a class="dropdown-item" href="#">Contact</a>
                         </div>
                       </li>
-                      <li class="nav-item">
-                         <a class="nav-link" href="#">Resume</a>
+                      <li class="btn-group">
+                         <a class="btn btn-primary" href="#">Resume</a>
                       </li>
                    </ul>
                 </div>
