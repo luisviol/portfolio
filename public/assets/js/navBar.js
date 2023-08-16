@@ -9,13 +9,21 @@ class NavBar extends HTMLElement {
                 <div class="navbar-collapse justify-content-end collapse" id="navbarNavDropdown" style="">
                    <ul class="navbar-nav">
                       <li class="nav-item active">
-                         <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                         <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Works</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Portfolio #1</a>
+                        <a class="dropdown-item" href="#">Portfolio #2</a>
+                        <a class="dropdown-item" href="#">Portfolio #3</a>
+                        </div>
                       </li>
                       <li class="nav-item">
-                         <a class="nav-link" href="about_me.html">Sobre mí</a>
+                         <a class="nav-link" href="about_me.html">About</a>
                       </li>
                       <li class="nav-item">
-                         <a class="nav-link" href="#">Resumen</a>
+                         <a class="nav-link" href="#">Resume</a>
                       </li>
                    </ul>
                 </div>
