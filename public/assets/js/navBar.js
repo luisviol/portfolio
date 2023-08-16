@@ -19,13 +19,14 @@ class NavBar extends HTMLElement {
                         <a class="dropdown-item" href="#">Portfolio #3</a>
                         </div>
                       </li>
-                      <li class="nav-item dropdown">
+                      <li class="nav-item dropdown mr-2">
                         <a class="nav-link dropdown-toggle" href="about_me.html" data-toggle="dropdown" aria-expanded="false">About</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="about_me.html">About me</a>
                         <a class="dropdown-item" href="#">Contact</a>
                         </div>
                       </li>
+                      <div class="dropdown-divider"></div>
                       <li class="btn-group">
                          <a class="btn btn-primary" href="#">Resume</a>
                       </li>
