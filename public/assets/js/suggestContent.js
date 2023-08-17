@@ -1,7 +1,7 @@
 class MoreContent extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `                  <section class="container">
+    this.innerHTML = `                  <section>
                 <div class="dropdown-divider mb-5"></div>
                 <div class="row mb-5">
                    <div class="col-md-6">
