@@ -28,7 +28,7 @@ class NavBar extends HTMLElement {
                       </li>
                       <div class="dropdown-divider"></div>
                       <li class="btn-group">
-                         <a class="btn btn-primary" href="#">Resume</a>
+                         <a class="main-action btn btn-dark" href="#">Download Resume</a>
                       </li>
                    </ul>
                 </div>
