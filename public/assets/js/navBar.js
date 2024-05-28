@@ -8,8 +8,11 @@ class NavBar extends HTMLElement {
                 </button>
                 <div class="navbar-collapse justify-content-end collapse" id="navbarNavDropdown" style="">
                    <ul class="navbar-nav">
-                      <li class="nav-item active">
+                      <li class="nav-item">
                          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="about_me.html">About me<span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Work</a>
@@ -19,16 +22,9 @@ class NavBar extends HTMLElement {
                         <a class="dropdown-item" href="#">Portfolio #3</a>
                         </div>
                       </li>
-                      <li class="nav-item dropdown mr-2">
-                        <a class="nav-link dropdown-toggle" href="about_me.html" data-toggle="dropdown" aria-expanded="false">About</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="about_me.html">About me</a>
-                        <a class="dropdown-item" href="#">Contact</a>
-                        </div>
-                      </li>
                       <div class="dropdown-divider"></div>
                       <li class="btn-group">
-                         <a class="main-action btn btn-dark" href="#">Download Resume</a>
+                         <a class="btn btn-light" href="#">Download Resume</a>
                       </li>
                    </ul>
                 </div>
