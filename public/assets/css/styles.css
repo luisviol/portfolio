@@ -2,7 +2,9 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-
+.lead{
+  line-height: 1.4;
+}
 .display-4{
   font-size: calc(1.53rem + 5.3vw);
   font-weight: 600;
