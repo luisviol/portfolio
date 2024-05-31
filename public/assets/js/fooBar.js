@@ -2,7 +2,7 @@ class FooBar extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `                  <div class="dropdown-divider"></div>
-             <footer class="footer mt-auto py-3">
+             <footer class="footer mt-auto py-3 mt-3">
                <div class="d-flex justify-content-between">
                  <div>
                    <p>© 2024 Luis Villasmil</p>
