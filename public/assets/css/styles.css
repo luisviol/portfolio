@@ -3,27 +3,50 @@ body {
 }
 
 
-
 .display-4{
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: calc(1.525rem + 3.3vw);
+  font-weight: 600;
   letter-spacing: 0px;
-  line-height: 5rem;
+  line-height: calc(0.53rem + 5.3vw);
+}
+.display-3{
+  font-size: calc(0.52rem + 3vw);
+  font-weight: 600;
+  line-height: calc(0.53rem + 3.3vw);
 }
 
-p, span, a  {
+.boxed-img {
+  padding: 0;
+  overflow: hidden; 
+  border-top-left-radius: 15px; border-top-right-radius: 15px; 
+  border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; 
+  position: relative; 
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p, span  {
     font-weight: 400;
-    color: black;
+    color: #71717a;
+    line-height: 1.25rem;
 }
 
 p {
-  font-size: 16px;
+  font-size: .875rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
+    color: #3f3f46;
+    -webkit-font-smoothing: antialiased;
+    
 }
 
 .back-to-top {
@@ -86,4 +109,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .btn-light{
   border-radius: 45px;
+}
+
+.zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

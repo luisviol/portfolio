@@ -1,8 +1,9 @@
 class NavBar extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = `         <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">lVillasmil</a>
+   constructor() {
+      super();
+      this.innerHTML = `          <style> nav {font-family: 'Inter', sans-serif;}
+  </style><nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand nav" href="index.html">Luis Villasmil</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,13 +24,13 @@ class NavBar extends HTMLElement {
                         </div>
                       </li>
                       <div class="dropdown-divider"></div>
-                      <li class="btn-group">
-                         <a class="btn btn-light" href="#">Download Resume</a>
+                      <li class="nav-item">
+                         <a class="nav-link" href="about_me.html">Download Resume<span class="sr-only">(current)</span></a>
                       </li>
                    </ul>
                 </div>
              </nav>`;
-  }
+   }
 }
 
 window.customElements.define('nav-bar', NavBar);
