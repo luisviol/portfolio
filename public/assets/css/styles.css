@@ -31,13 +31,13 @@ a {
   color: inherit;
 }
 
-p, span  {
+p, span, ul, li  {
     font-weight: 400;
-    color: #71717a;
+    color: #212529;
     line-height: 1.25rem;
 }
 
-p {
+p, ul, li {
   font-size: .875rem;
   -webkit-font-smoothing: antialiased;
 }
