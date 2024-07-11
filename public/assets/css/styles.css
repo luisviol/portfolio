@@ -1,7 +1,9 @@
 body {
     font-family: 'Inter', sans-serif;
 }
-
+.navbar-brand{
+  font-size: 1rem;
+}
 .lead{
   line-height: 1.4;
 }
