@@ -78,7 +78,7 @@ h6,
 }
 
 
-.grid-ss{
+.grid-ss {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
@@ -89,13 +89,23 @@ span {
 }
 
 .gap-sm {
-  gap:16px; 
+  gap: 16px;
+}
+
+.not-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+
 }
 
 .portf-row {
-    --bs-gutter-x: none;
-    --bs-gutter-y: none;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
 }
+
 .back-to-top {
   position: fixed;
   bottom: 25px;
