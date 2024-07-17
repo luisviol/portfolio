@@ -84,6 +84,11 @@ h6,
   gap: 32px;
 }
 
+@media (max-width: 768px) {
+  .grid-ss {
+      grid-template-columns: 1fr;
+  }
+
 span {
   -webkit-font-smoothing: antialiased;
 }
