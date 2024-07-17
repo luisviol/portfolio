@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Luis Villasmil - Batch Frame Creator Plugin Case Study</title>
-
+  <!--Chart-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
@@ -70,8 +71,9 @@
               <img src="public/assets/img/vreference.svg" class="img-fluid" alt="Visual Reference">
             </section>
             <section class="pb-4">
-              <h3>Solution &amp; Key Features</h3>
 
+
+              <h3>Solution &amp; Key Features</h3>
               <p>The Batch Frame Creator plugin addresses the problem with the following key features:</p>
               <div class="row gap-sm">
                 <div class="col-md card mb-2">
@@ -120,9 +122,20 @@
 
               </ul>
 
-              <img src="public/assets/img/vreference.svg" class="img-fluid" alt="Visual Reference">
-              <p>(2 charts - Click comparison and time on task
-                )</p>
+              <h4>Scalling Efficiency</h4>
+              <p class="card-text">
+                See how frame creation time skyrockets with the manual method, while the Batch Frame Creator maintains
+                consistent efficiency regardless of the number of frames.
+              </p>
+              <div class="card">
+                <div class="card-body">
+                  <div id="scalingEfficiencyChart"></div>
+                  <p class="mt-3 text-muted">
+                    <small>* Times are estimates and may vary based on user expertise and system performance.</small>
+                  </p>
+                </div>
+              </div>
+              
               <p>By focusing on these key features, the Batch Frame Creator plugin offers a targeted solution to a
                 common pain point in the Figma workflow, enhancing productivity and organization for designers.</p>
             </section>
@@ -135,10 +148,60 @@
       </div>
     </section>
 
+
+
+
+
     <foo-ter></foo-ter>
   </div>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var options = {
+        chart: {
+          type: 'line',
+          height: 350
+        },
+        series: [{
+          name: 'Manual Method',
+          data: [30, 150, 300, 450, 600]
+        }, {
+          name: 'Batch Frame Creator',
+          data: [5, 15, 25, 35, 45]
+        }],
+        xaxis: {
+          categories: [5, 20, 40, 60, 80],
+          title: {
+            text: 'Number of Frames'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Time (seconds)'
+          }
+        },
+        title: {
+          text: 'Creation Time vs. Number of Frames',
+          align: 'center',
+        },
+        colors: ['#dc3545', '#28a745'],
+        stroke: {
+          curve: 'smooth'
+        },
+        markers: {
+          size: 5
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#scalingEfficiencyChart"), options);
+      chart.render();
+    });
+  </script>
   <script src="public/assets/js/navBar.js"></script>
   <script src="public/assets/js/fooBar.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
