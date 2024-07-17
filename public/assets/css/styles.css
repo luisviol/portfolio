@@ -88,6 +88,14 @@ span {
   -webkit-font-smoothing: antialiased;
 }
 
+.gap-sm {
+  gap:16px; 
+}
+
+.portf-row {
+    --bs-gutter-x: none;
+    --bs-gutter-y: none;
+}
 .back-to-top {
   position: fixed;
   bottom: 25px;
