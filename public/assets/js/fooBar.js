@@ -7,11 +7,19 @@ class FooBar extends HTMLElement {
                  <div>
                    <p>© 2024 Luis Villasmil</p>
                  </div>
-                 <div><span class="mx-2"><i class="fab fa-linkedin-in"></i></span>
-                   <span class="mx-2"><i class="fab fa-unsplash"></i></span>
-                   <span class="mx-2"><i class="far fa-envelope"></i></span>
-                   <span class="ml-2"><i class="fab fa-dribbble"></i></span></div>
-               </div>
+                 <div class="social-links"><a href="https://www.linkedin.com/in/luisviol" target="_blank" rel="noopener noreferrer" class="mx-2" aria-label="LinkedIn Profile">
+    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+  </a>
+  <a href="https://unsplash.com/es/@luisviol" target="_blank" rel="noopener noreferrer" class="mx-2" aria-label="Unsplash Profile">
+    <i class="fab fa-unsplash" aria-hidden="true"></i>
+  </a>
+  <a href="mailto:luisviol22@gmail.com" class="mx-2" aria-label="Email Me">
+    <i class="far fa-envelope" aria-hidden="true"></i>
+  </a>
+  <a href="https://dribbble.com/luisviol" target="_blank" rel="noopener noreferrer" class="ml-2" aria-label="Dribbble Profile">
+    <i class="fab fa-dribbble" aria-hidden="true"></i>
+  </a>
+</div>
              </footer>`;
   }
 }
