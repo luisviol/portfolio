@@ -25,7 +25,7 @@ class NavBar extends HTMLElement {
                       </li>--->
                       <div class="dropdown-divider"></div>
                       <li class="nav-item">
-                         <a class="nav-link" href="about_me.html">Resume<span class="sr-only">(current)</span></a>
+                         <a class="text-white main-action btn btn-dark btn-sm py-2 px-3" href="#">Resume<span class="sr-only">(current)</span></a>
                       </li>
                    </ul>
                 </div>
