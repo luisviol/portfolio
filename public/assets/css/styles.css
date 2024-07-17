@@ -88,7 +88,7 @@ h6,
   .grid-ss {
       grid-template-columns: 1fr;
   }
-
+}
 span {
   -webkit-font-smoothing: antialiased;
 }
@@ -117,7 +117,10 @@ span {
   right: 25px;
   display: none;
 }
-
+.over{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .portfolio-color-1 {
   background: #f8f9fa;
 }
@@ -147,7 +150,17 @@ span {
 }
 
 /* Hover effects */
-
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
 
 .bg-title-case {
   /* background-image: url("https://images.unsplash.com/photo-1529119513315-c7c361862fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");*/
