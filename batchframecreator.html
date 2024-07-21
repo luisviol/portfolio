@@ -57,28 +57,205 @@
 
             <section class="pb-4">
               <h3>Overview</h3>
-              <p>Batch Frame Creator is a Figma plugin that empowers designers to create multiple frames with customizable properties in one go, dramatically speeding up the design workflow.</p>
+              <p>Batch Frame Creator is a Figma plugin that empowers designers to create multiple frames with
+                customizable properties in one go, dramatically speeding up the design workflow.</p>
 
               <img src="public/assets/img/vreference.svg" class="img-fluid" alt="Visual Reference">
             </section>
-            <section class="pb-4">
-              <h3>Problem Statement</h3>
-              <p>Designers often need to create numerous frames with specific dimensions and names, a process that's
-                time-consuming and repetitive when done manually in Figma. Especially in projects that require a large
-                number of flows or variants.</p>
 
-              <img src="public/assets/img/vreference.svg" class="img-fluid" alt="Visual Reference">
-            </section>
-            <section id="discovery_problem" class="pb-4">
+            <section id="discovery_problem" class="py-5">
               <h3>Discovery & Problem Statement</h3>
-              <img src="public/assets/img/empathymap_batch.jpg" class="img-fluid mb-4" alt="Batch Frame Creator Empaathy Map">
+              <p>While working on complex projects with extensive sitemaps, a significant pain point became apparent:
+                <strong>Figma lacked a native function for batch creating frames.</strong> This was particularly evident
+                when setting up
+                initial layouts for large-scale projects.
+              </p>
+              <h4>Key pain points identified:</h4>
+              <ul>
+                <li>Manual creation of numerous frames with specific dimensions and names
+                </li>
+                <li>Time spent on repetitive setup tasks instead of actual design work</li>
+                <li>Inconsistency in frame naming and sizing across large projects
+                </li>
+              </ul>
+
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Time Spent on UX Activities</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    UX designers spend a significant portion of their time on various activities. This chart highlights
+                    the distribution of time across key UX tasks, including design work that often involves repetitive
+                    frame creation.
+                  </p>
+                  <div id="uxActivitiesChart"></div>
+                  <p class="card-text mt-3">
+                    Key Points:
+                  <ul>
+                    <li>UX Design, including frame creation and setup, occupies the largest portion of time (23%).</li>
+                    <li>Time spent on repetitive tasks like frame creation could be reallocated to other crucial
+                      activities.</li>
+                    <li>Batch Frame Creator aims to reduce time spent on repetitive frame creation, potentially
+                      increasing efficiency in the UX Design category.</li>
+                  </ul>
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small>Source: UX Inner Circle Survey 2019 [1]</small>
+                </div>
+              </div>
+
+              <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  var options = {
+                    series: [{
+                      data: [23, 22, 15, 13, 10, 9, 8]
+                    }],
+                    chart: {
+                      type: 'bar',
+                      height: 350
+                    },
+                    plotOptions: {
+                      bar: {
+                        borderRadius: 4,
+                        horizontal: true,
+                      }
+                    },
+                    dataLabels: {
+                      enabled: true,
+                      formatter: function (val) {
+                        return val + "%"
+                      }
+                    },
+                    xaxis: {
+                      categories: ['UX Design', 'User Research', 'Information Architecture', 'Content Strategy', 'Interaction Design', 'Visual Design', 'Other'],
+                      labels: {
+                        formatter: function (val) {
+                          return val + "%"
+                        }
+                      }
+                    },
+                    colors: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'],
+                    title: {
+                      text: 'Time Allocation Across UX Activities',
+                      align: 'center',
+                      margin: 10,
+                      style: {
+                        fontSize: '18px',
+                        fontWeight: 'bold',
+                        color: '#263238'
+                      },
+                    },
+                  };
+
+                  var chart = new ApexCharts(document.querySelector("#uxActivitiesChart"), options);
+                  chart.render();
+                });
+              </script>
+
+              <div class="mt-3">
+                <small>
+                  [1] UX Inner Circle. "The 2019 UX and User Research Industry Survey Report." <a
+                    href="https://uxinnercircle.com/wp-content/uploads/2019/06/2019-UX-and-User-Research-Industry-Survey-Results.pdf"
+                    target="_blank">PDF Report</a>
+                </small>
+              </div>
+
+              <p>This process was not only time-consuming but also prone to errors, especially in projects requiring a
+                large number of flows or variants.</p>
+              <img src="public/assets/img/empathymap_batch.jpg" class="img-fluid mb-4"
+                alt="Batch Frame Creator Empaathy Map">
+              <figcaption class="blockquote-footer">
+                Empathy Map
+              </figcaption>
               <p>Designers often need to create numerous frames with specific dimensions and names, a process that's
                 time-consuming and repetitive when done manually in Figma. Especially in projects that require a large
                 number of flows or variants.</p>
 
-              
+
             </section>
-            <section class="pb-4">
+            <section id="Market Research" class="py-5">
+              <h3>Market Research</h3>
+              <p>Before developing the Batch Frame Creator, I conducted thorough market research:
+              </p>
+              <ul>
+                <li>Investigated existing solutions in the Figma plugin ecosystem</li>
+                <li>Analyzed user comments and requests in Figma community forums</li>
+                <li>Studied competitor plugins and their limitations</li>
+              </ul>
+              <p></p>
+              <h4>Key findings:</h4>
+              <ul>
+                <li>Limited plugins addressing bulk frame creation</li>
+                <li>Lack of flexibility in naming and sizing options in existing solutions</li>
+                <li>High demand in community forums for this functionality</li>
+              </ul>
+
+
+
+
+            </section>
+
+            <section id="Conceptualization &amp; Development" class="py-5">
+              <h3>Conceptualization &amp; Development</h3>
+              <p>Based on the identified needs, I conceptualized the Batch Frame Creator with these key features:</p>
+              <p>This development process involved:</p>
+              <ul>
+                <li>Creating initial wireframes and prototypes</li>
+                <li>Developing the plugin using Figma's API
+                </li>
+                <li>Iterative testing and refinement
+                </li>
+              </ul>
+
+              <h4>Key findings:</h4>
+              <ul>
+                <li>Limited plugins addressing bulk frame creation</li>
+                <li>Lack of flexibility in naming and sizing options in existing solutions</li>
+                <li>High demand in community forums for this functionality</li>
+              </ul>
+              [IMAGE HERE]
+            </section>
+            <section id="Iteration &amp; Refinement" class="py-5">
+              <h3>Iteration &amp; Refinement</h3>
+              <p>Throughout the development process:
+
+              </p>
+
+              <ul>
+                <li>Shared early versions with fellow designers for feedback</li>
+                <li>Iterated on the user interface to enhance usability</li>
+                <li>Refined features based on real-world usage scenarios
+
+                </li>
+                <li>Released multiple updates to address user feedback and add new features
+
+
+                </li>
+              </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+            <section class="pb-4" id="Solution &amp; Key Features">
 
 
               <h3>Solution &amp; Key Features</h3>
@@ -135,17 +312,34 @@
                 See how frame creation time skyrockets with the manual method, while the Batch Frame Creator maintains
                 consistent efficiency regardless of the number of frames.
               </p>
-              <div class="card">
+              <div class="card mb-4">
+                
                 <div class="card-body">
                   <div id="scalingEfficiencyChart"></div>
-                  <p class="mt-3 text-muted">
-                    <small>* Times are estimates and may vary based on user expertise and system performance.</small>
-                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small>Times are estimates and may vary based on user expertise and system performance.</small>
                 </div>
               </div>
               
-              <p>By focusing on these key features, the Batch Frame Creator plugin offers a targeted solution to a
-                common pain point in the Figma workflow, enhancing productivity and organization for designers.</p>
+              <h4>Key statistics</h4>
+              <ul>
+                <li>Save significant time on setup tasks
+                </li>
+                <li>Maintain consistent naming and sizing across projects
+                </li>
+                <li>Quickly create frames for multiple devices or use cases</li>
+
+              </ul>
+              <div class="card mb-4">
+                
+                <div class="card-body">
+                  <div id="taskCompletionChart"></div>
+                </div>
+                <div class="card-footer text-muted">
+                  <small>Comparison of manual method vs. Batch Frame Creator for various project sizes</small>
+                </div>
+              </div>
             </section>
 
 
@@ -165,7 +359,143 @@
   </div>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('timeAllocationChart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Setup Tasks', 'Actual Design', 'Revisions', 'Client Communication'],
+          datasets: [{
+            data: [35, 40, 15, 10],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: true,
+              text: 'Time Allocation in Design Project'
+            }
+          }
+        }
+      });
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var options = {
+        series: [{
+          name: 'Manual Method',
+          data: [30, 150, 300, 600, 1200]
+        }, {
+          name: 'Batch Frame Creator',
+          data: [10, 20, 35, 55, 80]
+        }],
+        chart: {
+          type: 'bar',
+          height: 350,
+          stacked: false,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['Small (5 frames)', 'Medium (20 frames)', 'Large (40 frames)', 'X-Large (80 frames)', 'XX-Large (160 frames)'],
+          title: {
+            text: 'Project Size'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Time (seconds)'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + " seconds"
+            }
+          }
+        },
+        colors: ['#FF6384', '#36A2EB'],
+        title: {
+          text: 'Task Completion Time: Manual vs Batch Frame Creator',
+          align: 'center',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize:  '14px',
+            fontWeight:  'bold',
+            color:  '#263238'
+          },
+        },
+        legend: {
+          position: 'bottom'
+        }
+      };
+    
+      var chart = new ApexCharts(document.querySelector("#taskCompletionChart"), options);
+      chart.render();
+    });
+    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('uxDoughnutChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Planning', 'Research', 'Design', 'User Testing', 'Iteration'],
+          datasets: [{
+            data: [20, 25, 30, 15, 10],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'bottom' },
+            title: { display: true, text: 'UX Project Time Distribution' }
+          }
+        }
+      });
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var options = {
