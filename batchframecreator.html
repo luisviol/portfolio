@@ -7,6 +7,7 @@
   <title>Luis Villasmil - Batch Frame Creator Plugin Case Study</title>
   <!--Chart-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
@@ -69,8 +70,10 @@
                 <strong>Figma lacked a native function for batch creating frames.</strong> This was particularly evident
                 when setting up
                 initial layouts for large-scale projects.
+                 In that sense, based on my own experience with the platform and some comments from colleagues and friends led me to identify the need for this type of functions.
+
               </p>
-              <h4>Key pain points identified:</h4>
+              <h5>I identified and established some key pain points:</h5>
               <ul>
                 <li>Manual creation of numerous frames with specific dimensions and names
                 </li>
@@ -78,113 +81,24 @@
                 <li>Inconsistency in frame naming and sizing across large projects
                 </li>
               </ul>
-
-              <div class="card">
-                <div class="card-header bg-primary text-white">
-                  <h5 class="card-title mb-0">Time Spent on UX Activities</h5>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">
-                    UX designers spend a significant portion of their time on various activities. This chart highlights
-                    the distribution of time across key UX tasks, including design work that often involves repetitive
-                    frame creation.
-                  </p>
-                  <div id="uxActivitiesChart"></div>
-                  <p class="card-text mt-3">
-                    Key Points:
-                  <ul>
-                    <li>UX Design, including frame creation and setup, occupies the largest portion of time (23%).</li>
-                    <li>Time spent on repetitive tasks like frame creation could be reallocated to other crucial
-                      activities.</li>
-                    <li>Batch Frame Creator aims to reduce time spent on repetitive frame creation, potentially
-                      increasing efficiency in the UX Design category.</li>
-                  </ul>
-                  </p>
-                </div>
-                <div class="card-footer text-muted">
-                  <small>Source: UX Inner Circle Survey 2019 [1]</small>
-                </div>
-              </div>
-
-              <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  var options = {
-                    series: [{
-                      data: [23, 22, 15, 13, 10, 9, 8]
-                    }],
-                    chart: {
-                      type: 'bar',
-                      height: 350
-                    },
-                    plotOptions: {
-                      bar: {
-                        borderRadius: 4,
-                        horizontal: true,
-                      }
-                    },
-                    dataLabels: {
-                      enabled: true,
-                      formatter: function (val) {
-                        return val + "%"
-                      }
-                    },
-                    xaxis: {
-                      categories: ['UX Design', 'User Research', 'Information Architecture', 'Content Strategy', 'Interaction Design', 'Visual Design', 'Other'],
-                      labels: {
-                        formatter: function (val) {
-                          return val + "%"
-                        }
-                      }
-                    },
-                    colors: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'],
-                    title: {
-                      text: 'Time Allocation Across UX Activities',
-                      align: 'center',
-                      margin: 10,
-                      style: {
-                        fontSize: '18px',
-                        fontWeight: 'bold',
-                        color: '#263238'
-                      },
-                    },
-                  };
-
-                  var chart = new ApexCharts(document.querySelector("#uxActivitiesChart"), options);
-                  chart.render();
-                });
-              </script>
-
-              <div class="mt-3">
-                <small>
-                  [1] UX Inner Circle. "The 2019 UX and User Research Industry Survey Report." <a
-                    href="https://uxinnercircle.com/wp-content/uploads/2019/06/2019-UX-and-User-Research-Industry-Survey-Results.pdf"
-                    target="_blank">PDF Report</a>
-                </small>
-              </div>
-
-              <p>This process was not only time-consuming but also prone to errors, especially in projects requiring a
-                large number of flows or variants.</p>
               <img src="public/assets/img/empathymap_batch.jpg" class="img-fluid mb-4"
                 alt="Batch Frame Creator Empaathy Map">
               <figcaption class="blockquote-footer">
                 Empathy Map
               </figcaption>
-              <p>Designers often need to create numerous frames with specific dimensions and names, a process that's
-                time-consuming and repetitive when done manually in Figma. Especially in projects that require a large
-                number of flows or variants.</p>
-
 
             </section>
             <section id="Market Research" class="py-5">
-              <h3>Market Research</h3>
-              <p>Before developing the Batch Frame Creator, I conducted thorough market research:
+              <h3>Research</h3>
+              <p>Taking into account the above and prior to the development of the plugin I did some research in the community to see if there was something similar.
+                It was then that I started to download and test the functionalities of some plugins and define common functionalities or aspects that would allow me to "fill the gap".
               </p>
               <ul>
-                <li>Investigated existing solutions in the Figma plugin ecosystem</li>
-                <li>Analyzed user comments and requests in Figma community forums</li>
-                <li>Studied competitor plugins and their limitations</li>
+                <li>Research some references, applying key words.</li>
+                <li>I looked for comments in forums that allowed me to have a better idea and consolidate concepts.</li>
+                <li>I verified limitations and scopes about what these offered.</li>
               </ul>
+
               <p></p>
               <h4>Key findings:</h4>
               <ul>
@@ -260,41 +174,11 @@
 
               <h3>Solution &amp; Key Features</h3>
               <p>The Batch Frame Creator plugin addresses the problem with the following key features:</p>
-              <div class="row gap-sm">
-                <div class="col-md card mb-2">
-                  <div class="card-body">
-                    <h5 class="card-title">Unlimited Frame Creation </h5>
-                    <p class="card-text">Generate as many frames as you need in a single operation, dramatically
-                      reducing the time spent on repetitive tasks.</p>
-
-                  </div>
-                </div>
-
-
-
-
-
-                <div class="col-md card mb-2">
-                  <div class="card-body">
-                    <h5 class="card-title">Optional Frame Naming</h5>
-                    <p class="card-text">Provide precise organization to your designs with customizable frame names.
-                      This feature allows for systematic naming conventions, making it easier to manage large projects
-                      or design systems.</p>
-
-                  </div>
-                </div>
-                <div class="col-md card mb-2">
-                  <div class="card-body">
-                    <h5 class="card-title">Customizable Frame Sizes</h5>
-                    <p class="card-text">Set specific heights and widths for your frames, allowing for flexible design
-                      setups that cater to various device sizes or design requirements.</p>
-
-                  </div>
-                </div>
-                <p>The plugin's user-friendly interface integrates seamlessly with Figma's ecosystem, designed for
-                  intuitive use and quick adoption by designers of all levels.</p><img
-                  src="public/assets/img/vreference.svg" class="img-fluid" alt="Visual Reference">
-              </div>
+              <img src="public/assets/img/impactmatrix.jpg" class="img-fluid mb-4"
+                      alt="Impact Matrix">
+                    <figcaption class="blockquote-footer">
+                      Impact/Effort Matrix Template
+              
               <p>This solution streamlines the frame creation process in Figma, enabling designers to:
 
               </p>
