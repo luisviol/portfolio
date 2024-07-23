@@ -105,7 +105,10 @@ span {
   margin-left: calc(-.5* var(--bs-gutter-x));
 
 }
-
+.port-img-fit{
+  height: 100%;
+  object-fit: cover;
+}
 .portf-row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
