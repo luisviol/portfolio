@@ -106,12 +106,6 @@ span {
 
 }
 
-.portf-img-top{
-    height: 100% !important;
-    width: 100%;
-    object-fit: none;
-}
-
 .portf-row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
