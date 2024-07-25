@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Luis Villasmil - Batch Frame Creator Plugin Case Study</title>
+  <!--Chart-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="public/assets/css/styles.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/191387e154.js" crossorigin="anonymous"></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="public/assets/img/favicon/site.webmanifest">
+</head>
+
+<body>
+  <div class="container">
+    <nav-bar></nav-bar>
+
+    <main role="main" class="animate__animated animate__slideInUp mt-5 py-3">
+      <div class="my-3 container-fluid">
+        <img src="public/assets/img/hero_reference.svg" alt="Batch Frame Creator Plugin"
+          class="img-fluid mx-auto d-block">
+      </div>
+    </main>
+
+    <section class="animate__animated animate__slideInUp">
+      <div class="container px-4 py-5 my-5">
+        <div class="row align-items-start">
+          <div class="col-md-3 col-sm-4 mb-5" id="project-data">
+            <div id="role">
+              <span class="clear-text">Role</span>
+              <p>UX Designer, Front-end Developer</p>
+            </div>
+            <div id="duration">
+              <span class="clear-text">Date</span>
+              <p>05.2024</p>
+            </div>
+            <div id="responsibilities">
+              <span class="clear-text">Responsibilities</span>
+              <p>UX Design, Wireframing, UX Research, UI Design, Development</p>
+            </div>
+          </div>
+
+          <div class="col col-lg" id="content">
+            <div id="intro" class="pb-4 mb-4">
+              <h1 class="mb-2">Batch Frame Creator: Streamlining Figma Workflows</h1>
+              <p class="mb-2">As a UX designer, I often found myself creating multiple frames in Figma for complex user
+                flows. This
+                repetitive task highlighted a gap in Figma's native functionality, sparking the idea for the Batch Frame
+                Creator plugin.
+              </p>
+            </div>
+            <div id="discovery-problemstatement" class="py-4">
+              <h2 class="mb-4">Discovery &amp; Problem Statement</h2>
+              <div class="my-5">
+                <h4>Identifying the need</h4>
+                <p>During a typical workday, I observed a colleague's frustration with manually creating numerous
+                  frames. This observation led to a crucial realization:</p>
+                <h5>Figma lacked a built-in solution for batch frame creation.</h5>
+              </div>
+              <div class="my-5">
+                <h4>Tracking</h4>
+                <p>During this process, I also wanted to estimate the time it would take a user to create frames, as
+                  well as name and organize each one.<br><br>
+
+                  After some testing, I estimated that at least 1+ seconds are needed to create templates (applying
+                  figma templates) and that at least 2 or more seconds are needed when trying to create a frame from 0.
+                  Not to mention that the process of naming, or setting dimensions to each artboard will depend on the
+                  user's expertise or if they were duplicated.
+                </p>
+                <div class="card">
+                  <div class="card-header">
+                    Time Spent on Figma Frame Creation (Time Ranges)
+                  </div>
+                  <div class="card-body">
+                    <div id="rangeChart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-5">
+                <h4>Market Research</h4>
+                <p>Before diving into development, I conducted a thorough search within the Figma community. While some
+                  plugins addressed similar needs, none fully met the specific requirements I had in mind.
+
+                </p>
+                <iframe class="airtable-embed"
+                  src="https://airtable.com/embed/appb5YTu46z6sr8q9/shrJ33erYJtJgIBSW?viewControls=on" frameborder="0"
+                  onmousewheel="" width="100%" height="533"
+                  style="background: transparent; border: 1px solid #ccc;"></iframe>
+              </div>
+
+              <div class="my-5">
+                <h4>Empathy Mapping</h4>
+                <p>To gain deeper insights into designers' needs, I created an empathy map. This exercise revealed key
+                  pain points:
+
+                </p>
+                <img src="public/assets/img/empathymap_batch.jpg" class="img-fluid mb-4"
+                  alt="Batch Frame Creator Empaathy Map">
+                <p>This exercise revealed key pain points:
+
+                </p>
+
+                <ul>
+                  <li>Time lost on repetitive tasks
+
+                  </li>
+                  <li>
+                    Frustration with manual frame creation
+                  </li>
+                  <li>
+                    Desire for consistency in large projects
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="ideation" class="py-4">
+              <h2 class="mb-4">Ideation &amp; Conceptualization</h2>
+              <div class="my-5">
+                <h4>Feature Brainstorming</h4>
+                <p>Drawing from the empathy map insights, I sketched out initial ideas for the plugin. These
+                  low-fidelity prototypes helped visualize potential features and user interfaces.</p>
+                  <img src="public/assets/img/brainstorming.jpg" class="img-fluid mb-4"
+                  alt="Brainstorming and concept">
+              </div>
+              <div class="my-5">
+                <h4>Effort Matrix</h4>
+                <p>To prioritize features for the MVP, I employed an effort matrix. This tool was instrumental in
+                  balancing user value against development complexity, ensuring a focused and achievable first release.
+                </p>
+                <img src="public/assets/img/impactmatrix.jpg" class="img-fluid my-4" alt="Effort Matrix">
+              </div>
+            </div>
+            <div id="design-proto" class="py-4">
+              <h2 class="mb-4">Design &amp; Prototyping</h2>
+              <div class="my-5">
+                <h4>Iterative UI Development</h4>
+                <p>The plugin's interface underwent several iterations. Each version refined the layout and
+                  functionality based on:</p>
+                <ul>
+                  <li>Personal testing</li>
+                  <li>Informal feedback from colleagues</li>
+                  <li>Usability considerations</li>
+                </ul>
+              </div>
+              <div class="my-5">
+                <h4>MVP Definition</h4>
+                <p>Guided by the effort matrix, I defined a set of core features for the initial release, focusing on
+                  delivering immediate value to users.
+                </p>
+              </div>
+            </div>
+            <div id="testing-refinement" class="py-4">
+              <h2 class="mb-4">Testing &amp; Refinement</h2>
+              <div class="my-5">
+                <h4>Peer Review</h4>
+                <p>Throughout the development process, I shared progress with a small group of designer friends. Their
+                  feedback was invaluable, leading to UI adjustments and feature enhancements.</p>
+              </div>
+              <div class="my-5">
+                <h4>Performance Validation</h4>
+                <p>To quantify the plugin's impact, I created a comparative chart showing the efficiency gained over
+                  manual frame creation. This data-driven approach helped validate the plugin's value.
+
+                </p>
+              </div>
+            </div>
+            <div id="launch" class="py-4">
+              <h2 class="mb-4">Launch &amp; Continuous Improvement
+
+              </h2>
+              <div class="my-5">
+                <h4>Community Release
+
+                </h4>
+                <p>After refining the plugin based on initial feedback, I released it to the Figma community. This
+                  launch marked the beginning of a new phase: gathering wider user feedback and identifying areas for
+                  improvement.</p>
+              </div>
+              <div class="my-5">
+                <h4>Iterative Updates</h4>
+                <p>Post-launch, I've continued to refine the plugin, addressing bugs and incorporating user suggestions.
+                  This ongoing process ensures the plugin remains relevant and useful.
+
+                </p>
+              </div>
+            </div>
+            <div id="reflection" class="py-4">
+              <h2 class="mb-4">Reflection &amp; Future Directions
+              </h2>
+              <div class="my-5">
+                <h4>Key Learnings
+                </h4>
+
+                <ul>
+                  <li>The importance of user-centered design, even in tool development</li>
+                  <li>The value of rapid prototyping and iterative development
+
+                  </li>
+                  <li>The power of community feedback in product evolution</li>
+                </ul>
+              </div>
+              <div class="my-5">
+                <h4>Next Steps</h4>
+                <p>Moving forward, I'm actively collecting community feedback to guide future updates. The goal is to
+                  continually enhance the plugin's functionality while maintaining its core simplicity and efficiency.
+
+                </p>
+              </div>
+            </div>
+            <div id="conclusion" class="py-4">
+              <h2 class="mb-4">Conclusion
+              </h2>
+
+              <div class="my-5">
+
+                <p>The Batch Frame Creator project exemplifies how identifying a common pain point can lead to a
+                  valuable tool for the design community. By applying UX principles to the development process itself, I
+                  was able to create a plugin that not only solves a specific problem but also enhances overall workflow
+                  efficiency for Figma users.
+                  <br><br>
+
+                  This journey from concept to community-used plugin underscores the importance of empathy, iterative
+                  design, and continuous improvement in creating impactful design tools.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <foo-ter></foo-ter>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    var options = {
+      series: [
+        {
+          name: 'Using Templates',
+          data: [
+            {
+              x: 'Frame Creation',
+              y: [1, 2]
+            },
+            {
+              x: 'Naming',
+              y: [1, 2]
+            },
+            {
+              x: 'Ordering',
+              y: [2, 3]
+            }
+          ]
+        },
+        {
+          name: 'Manual Creation',
+          data: [
+            {
+              x: 'Frame Creation',
+              y: [3, 5]
+            },
+            {
+              x: 'Naming',
+              y: [1, 4]
+            },
+            {
+              x: 'Ordering',
+              y: [2, 4]
+            }
+          ]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: 'rangeBar',
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val[0] + "s - " + val[1] + "s"
+        }
+      },
+      xaxis: {
+        type: 'numeric',
+        labels: {
+          formatter: function (val) {
+            return val + "s"
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: undefined
+        },
+      },
+      title: {
+        text: 'Figma Frame Creation Time Ranges (in seconds)',
+        align: 'center'
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#rangeChart"), options);
+    chart.render();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('timeAllocationChart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Setup Tasks', 'Actual Design', 'Revisions', 'Client Communication'],
+          datasets: [{
+            data: [35, 40, 15, 10],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: true,
+              text: 'Time Allocation in Design Project'
+            }
+          }
+        }
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var options = {
+        series: [{
+          name: 'Manual Method',
+          data: [30, 150, 300, 600, 1200]
+        }, {
+          name: 'Batch Frame Creator',
+          data: [10, 20, 35, 55, 80]
+        }],
+        chart: {
+          type: 'bar',
+          height: 350,
+          stacked: false,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['Small (5 frames)', 'Medium (20 frames)', 'Large (40 frames)', 'X-Large (80 frames)', 'XX-Large (160 frames)'],
+          title: {
+            text: 'Project Size'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Time (seconds)'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + " seconds"
+            }
+          }
+        },
+        colors: ['#FF6384', '#36A2EB'],
+        title: {
+          text: 'Task Completion Time: Manual vs Batch Frame Creator',
+          align: 'center',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '14px',
+            fontWeight: 'bold',
+            color: '#263238'
+          },
+        },
+        legend: {
+          position: 'bottom'
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#taskCompletionChart"), options);
+      chart.render();
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('uxDoughnutChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Planning', 'Research', 'Design', 'User Testing', 'Iteration'],
+          datasets: [{
+            data: [20, 25, 30, 15, 10],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'bottom' },
+            title: { display: true, text: 'UX Project Time Distribution' }
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var options = {
+        chart: {
+          type: 'line',
+          height: 350
+        },
+        series: [{
+          name: 'Manual Method',
+          data: [30, 150, 300, 450, 600]
+        }, {
+          name: 'Batch Frame Creator',
+          data: [5, 15, 25, 35, 45]
+        }],
+        xaxis: {
+          categories: [5, 20, 40, 60, 80],
+          title: {
+            text: 'Number of Frames'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Time (seconds)'
+          }
+        },
+        title: {
+          text: 'Creation Time vs. Number of Frames',
+          align: 'center',
+        },
+        colors: ['#dc3545', '#28a745'],
+        stroke: {
+          curve: 'smooth'
+        },
+        markers: {
+          size: 5
+        },
+        legend: {
+          position: 'top'
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#scalingEfficiencyChart"), options);
+      chart.render();
+    });
+  </script>
+  <script src="public/assets/js/navBar.js"></script>
+  <script src="public/assets/js/fooBar.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
