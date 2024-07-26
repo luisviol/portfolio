@@ -340,42 +340,27 @@
     <foo-ter></foo-ter>
   </div>
 
-  <!-- Scripts -->
-  <script>
-    var options = {
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Range Chart
+    var rangeChartOptions = {
       series: [
         {
           name: 'Using Templates',
           data: [
-            {
-              x: 'Frame Creation',
-              y: [1, 2]
-            },
-            {
-              x: 'Naming',
-              y: [1, 2]
-            },
-            {
-              x: 'Ordering',
-              y: [2, 3]
-            }
+            { x: 'Frame Creation', y: [1, 2] },
+            { x: 'Naming', y: [1, 2] },
+            { x: 'Ordering', y: [2, 3] }
           ]
         },
         {
           name: 'Manual Creation',
           data: [
-            {
-              x: 'Frame Creation',
-              y: [3, 5]
-            },
-            {
-              x: 'Naming',
-              y: [1, 4]
-            },
-            {
-              x: 'Ordering',
-              y: [2, 4]
-            }
+            { x: 'Frame Creation', y: [3, 5] },
+            { x: 'Naming', y: [1, 4] },
+            { x: 'Ordering', y: [2, 4] }
           ]
         }
       ],
@@ -384,9 +369,7 @@
         type: 'rangeBar',
       },
       plotOptions: {
-        bar: {
-          horizontal: true
-        }
+        bar: { horizontal: true }
       },
       dataLabels: {
         enabled: true,
@@ -403,9 +386,7 @@
         }
       },
       yaxis: {
-        title: {
-          text: undefined
-        },
+        title: { text: undefined },
       },
       title: {
         text: 'Figma Frame Creation Time Ranges (in seconds)',
@@ -413,196 +394,63 @@
       }
     };
 
-    var chart = new ApexCharts(document.querySelector("#rangeChart"), options);
-    chart.render();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var ctx = document.getElementById('timeAllocationChart').getContext('2d');
-      var chart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: ['Setup Tasks', 'Actual Design', 'Revisions', 'Client Communication'],
-          datasets: [{
-            data: [35, 40, 15, 10],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.8)',
-              'rgba(54, 162, 235, 0.8)',
-              'rgba(255, 206, 86, 0.8)',
-              'rgba(75, 192, 192, 0.8)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)'
-            ],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'bottom',
-            },
-            title: {
-              display: true,
-              text: 'Time Allocation in Design Project'
-            }
-          }
+    var rangeChart = new ApexCharts(document.querySelector("#rangeChart"), rangeChartOptions);
+    rangeChart.render();
+
+    // Scaling Efficiency Chart
+    var scalingEfficiencyOptions = {
+      chart: {
+        type: 'line',
+        height: 350
+      },
+      series: [{
+        name: 'Manual Method',
+        data: [30, 150, 300, 450, 600]
+      }, {
+        name: 'Batch Frame Creator',
+        data: [5, 15, 25, 35, 45]
+      }],
+      xaxis: {
+        categories: [5, 20, 40, 60, 80],
+        title: { text: 'Number of Frames' }
+      },
+      yaxis: {
+        title: { text: 'Time (seconds)' }
+      },
+      title: {
+        text: 'Creation Time vs. Number of Frames',
+        align: 'center',
+      },
+      colors: ['#dc3545', '#28a745'],
+      stroke: { curve: 'smooth' },
+      markers: { size: 5 },
+      legend: { position: 'top' }
+    };
+
+    var scalingEfficiencyChart = new ApexCharts(document.querySelector("#scalingEfficiencyChart"), scalingEfficiencyOptions);
+    scalingEfficiencyChart.render();
+  });
+</script>
+<script src="public/assets/js/navBar.js"></script>
+<script src="public/assets/js/fooBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const animatedSections = document.querySelectorAll('.animate__animated');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__fadeIn');
         }
       });
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var options = {
-        series: [{
-          name: 'Manual Method',
-          data: [30, 150, 300, 600, 1200]
-        }, {
-          name: 'Batch Frame Creator',
-          data: [10, 20, 35, 55, 80]
-        }],
-        chart: {
-          type: 'bar',
-          height: 350,
-          stacked: false,
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        xaxis: {
-          categories: ['Small (5 frames)', 'Medium (20 frames)', 'Large (40 frames)', 'X-Large (80 frames)', 'XX-Large (160 frames)'],
-          title: {
-            text: 'Project Size'
-          }
-        },
-        yaxis: {
-          title: {
-            text: 'Time (seconds)'
-          }
-        },
-        fill: {
-          opacity: 1
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return val + " seconds"
-            }
-          }
-        },
-        colors: ['#FF6384', '#36A2EB'],
-        title: {
-          text: 'Task Completion Time: Manual vs Batch Frame Creator',
-          align: 'center',
-          margin: 10,
-          offsetX: 0,
-          offsetY: 0,
-          floating: false,
-          style: {
-            fontSize: '14px',
-            fontWeight: 'bold',
-            color: '#263238'
-          },
-        },
-        legend: {
-          position: 'bottom'
-        }
-      };
+    }, { threshold: 0.1 });
 
-      var chart = new ApexCharts(document.querySelector("#taskCompletionChart"), options);
-      chart.render();
+    animatedSections.forEach(section => {
+      observer.observe(section);
     });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var ctx = document.getElementById('uxDoughnutChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Planning', 'Research', 'Design', 'User Testing', 'Iteration'],
-          datasets: [{
-            data: [20, 25, 30, 15, 10],
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: 'bottom' },
-            title: { display: true, text: 'UX Project Time Distribution' }
-          }
-        }
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var options = {
-        chart: {
-          type: 'line',
-          height: 350
-        },
-        series: [{
-          name: 'Manual Method',
-          data: [30, 150, 300, 450, 600]
-        }, {
-          name: 'Batch Frame Creator',
-          data: [5, 15, 25, 35, 45]
-        }],
-        xaxis: {
-          categories: [5, 20, 40, 60, 80],
-          title: {
-            text: 'Number of Frames'
-          }
-        },
-        yaxis: {
-          title: {
-            text: 'Time (seconds)'
-          }
-        },
-        title: {
-          text: 'Creation Time vs. Number of Frames',
-          align: 'center',
-        },
-        colors: ['#dc3545', '#28a745'],
-        stroke: {
-          curve: 'smooth'
-        },
-        markers: {
-          size: 5
-        },
-        legend: {
-          position: 'top'
-        }
-      };
-
-      var chart = new ApexCharts(document.querySelector("#scalingEfficiencyChart"), options);
-      chart.render();
-    });
-  </script>
-  <script src="public/assets/js/navBar.js"></script>
-  <script src="public/assets/js/fooBar.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  });
+</script>
 </body>
 
 </html>
