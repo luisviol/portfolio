@@ -31,8 +31,8 @@
 
     <main role="main" class="animate__animated animate__slideInUp mt-5 py-3">
       <div class="my-3 container-fluid">
-        <img src="public/assets/img/hero_reference.svg" alt="Batch Frame Creator Plugin"
-          class="img-fluid mx-auto d-block">
+        <img src="public/assets/img/cover.svg" alt="Batch Frame Creator Plugin"
+          class="rounded img-fluid mx-auto d-block">
       </div>
     </main>
 
@@ -62,21 +62,32 @@
                 repetitive task highlighted a gap in Figma's native functionality, sparking the idea for the Batch Frame
                 Creator plugin.
               </p>
+              <div class="container my-5">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                      <iframe src="https://drive.google.com/file/d/1qhRNUqAe-P9K_GOQdDbjOklAMp5pmLvR/preview"
+                        allow="autoplay" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="discovery-problemstatement" class="py-4">
               <h2 class="mb-4">Discovery &amp; Problem Statement</h2>
               <div class="my-5">
                 <h4>Identifying the need</h4>
                 <p>During a typical workday, I observed a colleague's frustration with manually creating numerous
                   frames. This observation led to a crucial realization:</p>
-                <h5>Figma lacked a built-in solution for batch frame creation.</h5>
+                <img src="public/assets/img/problemstatement.svg" class="my-5 rounded img-fluid mb-4"
+                  alt="Problem Statement">
               </div>
               <div class="my-5">
                 <h4>Tracking</h4>
                 <p>During this process, I also wanted to estimate the time it would take a user to create frames, as
                   well as name and organize each one.<br><br>
-                  <img src="public/assets/img/manual-creation.gif" class="rounded img-fluid mb-4"
-                    alt="Creation process manually"><br>
+                  <div class="container text-center"><img src="public/assets/img/manual-creation.gif" class="rounded img-fluid mb-4" alt="Creation process manually"></div><br>
 
                   After some testing, I estimated that at least 1+ seconds are needed to create frames (applying/using
                   figma templates) and that at least 2 or more seconds are needed when trying to create a frame from 0.
@@ -129,6 +140,7 @@
                 </ul>
               </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="ideation" class="py-4">
               <h2 class="mb-4">Ideation &amp; Conceptualization</h2>
               <div class="my-5">
@@ -145,13 +157,27 @@
                 <img src="public/assets/img/impactmatrix.jpg" class="img-fluid my-4" alt="Effort Matrix">
               </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="research-dev" class="py-4">
               <h2 class="mb-4">Research &amp; Development</h2>
               <div class="my-5">
-                <h4>MVP Definition</h4>
+                <h4>User Flow & MVP Definition</h4>
                 <p>Guided by the effort matrix, I defined a set of core features for the initial release, focusing on
                   delivering immediate value to users.
+                  <br><br>
+                  Also trying to consolidate the functionality into a simple and quick to use flow. I prioritized the
+                  following features for the MVP:
                 </p>
+                <ul>
+                  <li>Batch creation of frames.</li>
+                  <li>Naming Frames (optional), individually
+                  </li>
+                  <li>Specify measures per batch (to all frames)
+                  </li>
+                  <li>Automatically organize each created frame in a row, respecting specific averages. This is to avoid
+                    overlapping frames, among other possible problems.</li>
+                </ul>
+                <img src="public/assets/img/userflow.jpg" class="img-fluid mb-4" alt="User flow">
               </div>
               <div class="my-5">
                 <h4>Learning & Adaptation</h4>
@@ -164,7 +190,7 @@
                 <h4>Iterative Development</h4>
                 <p>The plugin's interface underwent several iterations. Each version refined the layout and
                   functionality based on:</p>
-                  <img src="public/assets/img/coding.png" class="img-fluid my-4" alt="Coding">
+                <img src="public/assets/img/coding.png" class="img-fluid my-4" alt="Coding">
                 <ul>
                   <li>Personal testing</li>
                   <li>Informal feedback from colleagues</li>
@@ -172,19 +198,21 @@
                 </ul>
               </div>
               <div class="my-5">
-                <h4>API Integration</h4>
+                <h4>API Integration & Workflow</h4>
                 <p>Following Figma's API documentation, I worked on integrating the plugin seamlessly with the Figma
                   interface, ensuring a smooth user experience.
                 </p>
                 <img src="public/assets/img/code_flow.jpg" class="img-fluid mb-4" alt="Code flow">
               </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="design-proto" class="py-4">
               <h2 class="mb-4">Design &amp; Prototyping</h2>
               <div class="my-5">
                 <h4>Concept</h4>
                 <p>During the first stages of this process I wanted to design something <strong>easy to use</strong>,
                   understanding the context and the environment where it would be used.</p>
+                <img src="public/assets/img/features_layout.svg" class="img-fluid my-4" alt="UI LAYOUT">
                 <p>Visually I sought to emulate from the first moment the principles or visual standards of figma,
                   such as fonts, colors, and other styles.</p>
                 <img src="public/assets/img/uikit.svg" class="img-fluid my-4" alt="UI KIT">
@@ -192,21 +220,11 @@
                 <p>On the one hand I focused on making it <strong>fully functional and well integrated</strong> within
                   the platform. Applying good accessibility principles, managing a general score that allows correct
                   legibility and guarantees accessibility for different users (A11Y).</p>
-                  <img src="public/assets/img/accesibility.png" class="img-fluid my-4"
-                  alt="A11Y">
+                <img src="public/assets/img/accesibility.png" class="img-fluid my-4" alt="A11Y">
               </div>
-              <div class="my-5">
-                <h4>UI Iteration</h4>
-                <p>The plugin's interface underwent several iterations. Each version refined the layout and
-                  functionality based on:</p>
-                <ul>
-                  <li>Personal testing</li>
-                  <li>Informal feedback from colleagues</li>
-                  <li>Usability considerations</li>
-                </ul>
-              </div>
-              
+
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="testing-refinement" class="py-4">
               <h2 class="mb-4">Testing &amp; Refinement</h2>
               <div class="my-5">
@@ -225,8 +243,9 @@
                   </div>
                 </div>
               </div>
-              
+
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="launch" class="py-4">
               <h2 class="mb-4">Launch &amp; Continuous Improvement
 
@@ -243,10 +262,30 @@
                 <h4>Iterative Updates</h4>
                 <p>Post-launch, I've continued to refine the plugin, addressing bugs and incorporating user suggestions.
                   This ongoing process ensures the plugin remains relevant and useful.
-
                 </p>
+
+                <div class="container bg-light p-2 card">
+                  <div class="bg-light"><span><strong>UI Refinement</strong> </span><span class="text-muted"> V.3
+                    </span>
+                    <P>Performance enhancements, bug fixes, frame positioning without overlapping.</P>
+                  </div>
+                  <div class="bg-light"><span><strong>Bug Fixes</strong> </span><span class="text-muted"> V.2
+                    </span>
+                    <P>In this version users can expect to be able to create an infinite number of frames per batch, as
+                      well
+                      as being able to add specific names to each of these frames.</P>
+                  </div>
+                  <div class="bg-light"><span><strong>Functionality enhancement</strong> </span><span
+                      class="text-muted"> V.1
+                    </span>
+                    <P>Adjustments to the view and rendering of the plugin</P>
+                  </div>
+
+
+                </div>
               </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="reflection" class="py-4">
               <h2 class="mb-4">Reflection &amp; Future Directions
               </h2>
@@ -255,11 +294,10 @@
                 </h4>
 
                 <ul>
+                  <li>The creation process of this project was very satisfying. With a Lean (UX) approach I was able to iterate and test functionalities quickly from early stages.</li>
+                  <li>Working with the use of AI to connect certain ends in the logic of my project was vital.</li>
                   <li>The importance of user-centered design, even in tool development</li>
-                  <li>The value of rapid prototyping and iterative development
-
-                  </li>
-                  <li>The power of community feedback in product evolution</li>
+                  <li>It was a project from start to finish, thought out, developed/designed and launched by me. </li>
                 </ul>
               </div>
               <div class="my-5">
@@ -270,6 +308,7 @@
                 </p>
               </div>
             </div>
+            <div class="dropdown-divider py-3"></div>
             <div id="conclusion" class="py-4">
               <h2 class="mb-4">Conclusion
               </h2>
